@@ -1,4 +1,4 @@
-# Serverless Iam Roles Names Per Function
+# Serverless Custom Iam Roles Names Per Function
 
 A Serverless plugin to make sure function role names are always valid, ie:
 
@@ -13,7 +13,15 @@ auto generated role name for function: ${functionName} is too long (over 64 char
 Try setting a custom role name using the property: iamRoleStatementsName.
 ```
 
-To use it, add it to the `plugin` key of your Serverless config file.
+## Usage
+
+Install with
+
+```bash
+yarn add --dev serverless-custom-iam-roles-per-function
+```
+
+Add `serverless-custom-iam-roles-per-function` to your serverless plugins.
 
 ## ⚠️ Dependency
 

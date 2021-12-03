@@ -1,6 +1,6 @@
 {
   "name": "serverless-custom-iam-roles-per-function",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Adrien Cacciaguerra",
   "license": "MIT",
   "homepage": "https://github.com/adriencaccia/serverless-custom-iam-roles-per-function#readme",
@@ -20,9 +20,8 @@
     "package:cjs": "NODE_ENV=cjs yarn transpile --out-dir dist/cjs --source-maps",
     "package:esm": "NODE_ENV=esm yarn transpile --out-dir dist/esm --source-maps",
     "package:types": "ttsc",
-    "postinstall": "yarn syncpack format",
     "precommit": "lint-staged",
-    "prepare": "husky install",
+    "prepare": "husky install && syncpack format",
     "prepublishOnly": "yarn package",
     "test:linter": "yarn linter-base-config .",
     "test:unit": "jest --runInBand --collectCoverage --logHeapUsage",
